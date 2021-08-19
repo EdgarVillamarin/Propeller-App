@@ -12,7 +12,7 @@ with siteHeader:
   st.text('In this project')
 
 
-url = 'www.grupo-villamarin.com'
+url = 'https://grupo-villamarin.com/'
 
 if st.button('Open browser'):
     webbrowser.open_new_tab(url)
