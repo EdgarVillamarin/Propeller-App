@@ -9,7 +9,7 @@ with siteHeader:
   st.header('*by Nav.Eng. Edgar Villamarin*')
   link = '[Contact Info](https://grupo-villamarin.com/)'
   st.markdown(link, unsafe_allow_html=True)
-  st.subheader('**mail:** <www.grupo-villamarin.com>')
+  st.subheader('**mail:** <https://grupo-villamarin.com/>')
   st.text('In this project')
   
 with dataExploration:
