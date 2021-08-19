@@ -12,7 +12,7 @@ with siteHeader:
   st.markdown(link, unsafe_allow_html=True)
   st.subheader('**mail:** <e_villamarin@grupo-villamarin.com>')
   """
-  ### Project
+  ### *Project*
   """
   
 with dataExploration:
