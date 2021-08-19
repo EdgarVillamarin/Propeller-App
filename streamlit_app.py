@@ -24,4 +24,4 @@ with newFeatures:
 with modelTraining:
   st.header('Wave Piercing Propeller')
   ha=pd.read_csv('Coefficients/ka365.csv')
-  st.write(ha)
+  st.table(ha)
