@@ -5,7 +5,8 @@ import pandas as pd
 import streamlit as st
 
 """
-# Welcome to Streamlit!
+# Ship Propeller!
+### by Edgar Villamarin
 
 Edit `/streamlit_app.py` to customize this app to your heart's desire :heart:
 
