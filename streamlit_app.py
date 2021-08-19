@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 #import plotly.figure_factory as ff
 #import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 
 siteHeader = st.container()
 dataExploration = st.container()
@@ -25,3 +26,5 @@ with modelTraining:
   st.header('Wave Piercing Propeller')
   ha=pd.read_csv('Coefficients/ka365.csv')
   st.table(ha)
+  fig=plt.plot(ha['Axy 3-65'])
+  st.pyplot(fig)
