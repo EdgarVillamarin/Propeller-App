@@ -11,4 +11,9 @@ with siteHeader:
   st.markdown(link, unsafe_allow_html=True)
   #st.subheader('mail: e_villamarin@hotmail.com')
   st.text('In this project')
+  
+with dataExploration:
+  st.header('Wagenningen Propellers')
 
+with newFeatures:
+  st.header('Kaplan Propellers')
