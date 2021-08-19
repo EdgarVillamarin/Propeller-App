@@ -8,5 +8,5 @@ modelTraining = st.beta_container()
 with siteHeader:
   st.title('Welcome to Ship Propeller Project')
   st.header('by Nav.Eng. Edgar Villamarin')
-  st.subheader('e_villamarin@hotmail.com')
+  st.subheader('[link](e_villamarin@hotmail.com)')
   st.text('In this project')
