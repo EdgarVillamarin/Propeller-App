@@ -11,8 +11,5 @@ with siteHeader:
   st.subheader('mail: e_villamarin@hotmail.com')
   st.text('In this project')
 
-
-url = 'https://grupo-villamarin.com/'
-
-if st.button('Open browser'):
-    webbrowser.open_new_tab(url)
+link = '[GitHub](https://grupo-villamarin.com/)'
+st.markdown(link, unsafe_allow_html=True)
