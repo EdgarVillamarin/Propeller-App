@@ -1,10 +1,10 @@
 import streamlit as st
 import pandas as pd
 
-siteHeader = st.beta_container()
-dataExploration = st.beta_container()
-newFeatures = st.beta_container()
-modelTraining = st.beta_container()
+siteHeader = st.ontainer()
+dataExploration = st.container()
+newFeatures = st.container()
+modelTraining = st.container()
 
 with siteHeader:
   st.title('Welcome to Ship Propeller Project')
