@@ -25,6 +25,4 @@ with newFeatures:
 with modelTraining:
   st.header('Wave Piercing Propeller')
   ha=pd.read_csv('Coefficients/ka365.csv')
-  st.table(ha)
-  fig=plt.plot(ha['Axy 3-65'],ha['Axy 3-65'])
-  st.pyplot(fig)
+  st.write(ha)
