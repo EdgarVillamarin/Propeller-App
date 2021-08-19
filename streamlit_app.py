@@ -17,3 +17,6 @@ with dataExploration:
 
 with newFeatures:
   st.header('Kaplan Propellers')
+  
+with modelTraining:
+  st.header('Wave Piercing Propeller') 
