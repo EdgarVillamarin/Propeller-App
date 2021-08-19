@@ -3,7 +3,7 @@ import pandas as pd
 #import plotly.figure_factory as ff
 #import matplotlib.pyplot as plt
 import matplotlib.pyplot as plt
-
+import matplotlib
 siteHeader = st.container()
 dataExploration = st.container()
 newFeatures = st.container()
