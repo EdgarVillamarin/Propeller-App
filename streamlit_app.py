@@ -1,5 +1,5 @@
 import streamlit as st
-import webbrowser
+import matplotlib.pyplot as plt
 siteHeader = st.beta_container()
 dataExploration = st.beta_container()
 newFeatures = st.beta_container()
