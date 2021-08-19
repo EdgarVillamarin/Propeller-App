@@ -3,7 +3,7 @@ import altair as alt
 import math
 import pandas as pd
 import streamlit as st
-
+import matplotlib.pyplot as plt
 """
 # Ship Propeller
 ### by Edgar Villamarin
