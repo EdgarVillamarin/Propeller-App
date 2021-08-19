@@ -11,7 +11,7 @@ with siteHeader:
   link = '[Contact Info](https://grupo-villamarin.com/)'
   st.markdown(link, unsafe_allow_html=True)
   st.subheader('**mail:** <e_villamarin@grupo-villamarin.com>')
-  st.text('In this project')
+  st.text('## In this project')
   
 with dataExploration:
   st.header('Wagenningen Propellers')
