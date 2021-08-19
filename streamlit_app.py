@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 siteHeader = st.beta_container()
 dataExploration = st.beta_container()
@@ -19,4 +20,6 @@ with newFeatures:
   st.header('Kaplan Propellers')
   
 with modelTraining:
-  st.header('Wave Piercing Propeller') 
+  st.header('Wave Piercing Propeller')
+  
+ha=pd.read_csv('Coefficients/ka365.csv')  
