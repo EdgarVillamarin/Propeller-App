@@ -101,7 +101,8 @@ with dataExploration:
   #AEAO=0.7
   #z=3
   ready=st.checkbox('READY')
-  if ready==True:  
+  if ready==True:
+    st.write('**Wait...**')
     villamarin=curve_kt_kq(PD,AEAO,z)
   #st.write(villamarin)
     fig=plot_propeller(villamarin,PD,AEAO,z)
