@@ -13,12 +13,14 @@ modelTraining = st.container()
 def plot_propeller(Data,PD,AEAO,z):
   import matplotlib.pyplot as plt
   head=list(Data.columns)
-  fig,ax=plt.subplots(figsize=(7,3))
-  ax.plot(Data['J'],Data['KT'],'k',Data['J'],10*Data['KQ'],'r',Data['J'],Data['no'])
-  ax.set_xlabel('Advanced Coefficient   J')
-  ax.set_ylabel('Kt,10*Kq,no')
-  ax.set_title('B-serie'+'  '+'z:'+' '+str(z)+'  '+'AEAO:'+' '+str(AE/AO)+'  '+'PD:'+' '+str(P/D))
-  ax.plot.grid()
+  fig=plt.figure(figsize=(7,3))
+  #fig,ax=plt.subplots(figsize=(7,3))
+  #ax.plot(Data['J'],Data['KT'],'k',Data['J'],10*Data['KQ'],'r',Data['J'],Data['no'])
+  plt.plot(Data['J'],Data['KT'],'k',Data['J'],10*Data['KQ'],'r',Data['J'],Data['no'])
+  #ax.set_xlabel('Advanced Coefficient   J')
+  #ax.set_ylabel('Kt,10*Kq,no')
+  #ax.set_title('B-serie'+'  '+'z:'+' '+str(z)+'  '+'AEAO:'+' '+str(AE/AO)+'  '+'PD:'+' '+str(P/D))
+  #ax.plot.grid()
   return fig
   
 def wage(ja,PD,AEAO,z):
