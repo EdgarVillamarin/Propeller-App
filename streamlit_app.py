@@ -101,9 +101,9 @@ with dataExploration:
   #AEAO=0.7
   #z=3
   ready=st.checkbox('READY')
-  st.write('For other combination of parameters, mark uncheck ')
   if ready==True:
     st.write('**Calculating...**')
+    st.write('For other combination of parameters, first mark uncheck ')
     villamarin=curve_kt_kq(PD,AEAO,z)
   #st.write(villamarin)
     fig=plot_propeller(villamarin,PD,AEAO,z)
