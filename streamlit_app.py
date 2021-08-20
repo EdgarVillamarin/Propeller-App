@@ -88,9 +88,8 @@ with siteHeader:
 with dataExploration:
   st.header('Wagenningen Propellers')
   st.latex(r'''
-...     a + ar + a r^2 + a r^3 + \cdots + a r^{n-1} =
-...     \sum_{k=0}^{n-1} ar^k =
-...     a \left(\frac{1-r^{n}}{1-r}\right)
+...     KT=
+...     \sum_{s,t,u,v}^{} C^TJ^k(P/D)^t(A_{E}/A_{O})^uZ^v =
 ...     ''')
   PD=1.2
   AEAO=0.7
