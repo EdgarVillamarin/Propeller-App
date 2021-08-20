@@ -93,7 +93,10 @@ with siteHeader:
   link = '[Contact Info](https://grupo-villamarin.com/)'
   st.markdown(link, unsafe_allow_html=True)
   #st.subheader('**mail:** <e_villamarin@grupo-villamarin.com>')
-  st.text('The aim of this project is present a data base for a propeller')
+  st.text('''Dear network, the aim of this project is make available open-water characteristics for ship propeller design and selection, for a wide range of propllers series in this web app
+            At the moment, the classic B-series are available here. I hope for the future to upgrade the app with other propeller series
+          hence, if you have other propeller series data availble, I would be grateful shared with me the information via mail''')
+       
 with dataExploration:
   st.header('Wagenningen Propellers')
   st.text('The polynomials equation for thrust:')
