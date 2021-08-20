@@ -137,3 +137,4 @@ with dataExploration:
   #fig,ax=plt.subplots(figsize=(7, 3))
   #ax.plot(ha['Axy 3-65'],ha['Axy 3-65'])
   #st.pyplot(fig)
+
