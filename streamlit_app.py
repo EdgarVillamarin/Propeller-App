@@ -11,12 +11,12 @@ dataExploration = st.container()
 newFeatures = st.container()
 modelTraining = st.container()
 
-def get_table_download_link_csv(df):
+def get_table_download_link_csv(df,PD,AEAO,z):
     #csv = df.to_csv(index=False)
     csv = df.to_csv().encode()
     #b64 = base64.b64encode(csv.encode()).decode() 
     b64 = base64.b64encode(csv).decode()
-    href = f'<a href="data:file/csv;base64,{b64}" download="captura.csv" target="_blank">Download csv file</a>'
+    href = f'<a href="data:file/csv;base64,{b64}" download="B serie"+"_P/D"+"_"str(PD)+"_AEAO"+"_"str(AEAO)+"_z"+"_"str(z)+".csv" target="_blank">Download csv file</a>'
     return href
 
 def plot_propeller(Data,PD,AEAO,z):
