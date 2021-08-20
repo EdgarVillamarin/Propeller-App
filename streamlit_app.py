@@ -98,7 +98,7 @@ with siteHeader:
   for a wide range of propllers series in this web app
   At the moment, the classic B-series are available here.
   I hope for the future to upgrade the
-  app with other propeller serieshence,
+  app with other propeller series, hence,
   if you have other propeller series data availble,
   I would be grateful shared with me the information via mail <e_villamarin@grupo-villamarin.com>''')
        
