@@ -2,8 +2,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import base64 
-import time
-timestr = time.strftime("%Y%m%d-%H%M%S")
 #import plotly.figure_factory as ff
 #import matplotlib.pyplot as plt
 import matplotlib.pyplot as plt
@@ -111,7 +109,7 @@ with dataExploration:
   #st.write(villamarin)
     fig=plot_propeller(villamarin,PD,AEAO,z)
     st.pyplot(fig)
-    results=villamarin.to_csv('Propeller Results,'+str(PD)+str(AEAO)+str(z)+'.csv').encode()
+    results=villamarin.to_csv().encode()
     b64 = base64.b64encode(results).decode()
     href = f'Download CSV File'
     st.markdown(href, unsafe_allow_html=True)
