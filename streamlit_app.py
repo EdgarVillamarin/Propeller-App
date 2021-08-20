@@ -107,7 +107,7 @@ with dataExploration:
   #st.write(villamarin)
     fig=plot_propeller(villamarin,PD,AEAO,z)
     st.pyplot(fig)
-    ready==False
+  ready==False
 #with newFeatures:
  # st.header('Kaplan Propellers')
   
