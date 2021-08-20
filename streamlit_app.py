@@ -18,6 +18,7 @@ def plot_propeller(Data,PD,AEAO,z):
   #ax.plot(Data['J'],Data['KT'],'k',Data['J'],10*Data['KQ'],'r',Data['J'],Data['no'])
   plt.plot(Data['J'],Data['KT'],'k',Data['J'],10*Data['KQ'],'r',Data['J'],Data['no'])
   plt.title('B-serie'+'  '+'z:'+' '+str(z)+'  '+'AEAO:'+' '+str(AEAO)+'  '+'PD:'+' '+str(PD))
+  plt.legend(['Kt','10*Kq','no'])
   plt.grid()
   plt.xlabel('Advanced Coefficient   J')
   plt.ylabel('Kt,10*Kq,no')
