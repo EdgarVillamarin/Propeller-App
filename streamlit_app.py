@@ -100,7 +100,7 @@ with dataExploration:
   #PD=1.2
   #AEAO=0.7
   #z=3
-  ready=st.checkbox('**READY**')
+  ready=st.checkbox('READY')
   if ready==True:  
     villamarin=curve_kt_kq(PD,AEAO,z)
   #st.write(villamarin)
