@@ -17,6 +17,7 @@ def plot_propeller(Data,PD,AEAO,z):
   #fig,ax=plt.subplots(figsize=(7,3))
   #ax.plot(Data['J'],Data['KT'],'k',Data['J'],10*Data['KQ'],'r',Data['J'],Data['no'])
   plt.plot(Data['J'],Data['KT'],'k',Data['J'],10*Data['KQ'],'r',Data['J'],Data['no'])
+  plt.title('asd')
   plt.grid()
   plt.xlabel('Advanced Coefficient   J')
   plt.ylabel('Kt,10*Kq,no')
