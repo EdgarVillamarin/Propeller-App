@@ -100,7 +100,7 @@ with siteHeader:
   I hope for the future to upgrade the
   app with other propeller serieshence,
   if you have other propeller series data availble,
-  I would be grateful shared with me the information via mail <e_villamarin@grupo-villamarin.com>''')
+  I would be grateful shared with me the information via mail <e_villamarin@grupo-villamarin.com>''',unsafe_allow_html=True)
        
 with dataExploration:
   st.header('Wagenningen Propellers')
