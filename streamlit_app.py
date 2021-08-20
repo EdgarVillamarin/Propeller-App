@@ -87,9 +87,9 @@ with siteHeader:
   st.text('The aim of this project is present a data base for a propeller')
 with dataExploration:
   st.header('Wagenningen Propellers')
-  st.text('The polynomials for thrust:')
+  st.text('The polynomials equation for thrust:')
   st.latex(r''' K_{T}= \sum_{s,t,u,v}^{} C^TJ^s(P/D)^t(A_{E}/A_{O})^uZ^v ''')
-  st.text('The polynomials for torque:')
+  st.text('The polynomials equation for torque:')
   st.latex(r''' K_{Q}= \sum_{s,t,u,v}^{} C^QJ^s(P/D)^t(A_{E}/A_{O})^uZ^v ''')
   st.text('The open-water efficiency of the propeller is:')
   st.latex(r''' n_{O}= \frac{JK_{T}}{2\pi K_{Q}}''')
