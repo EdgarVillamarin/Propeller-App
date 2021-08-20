@@ -11,6 +11,14 @@ dataExploration = st.container()
 newFeatures = st.container()
 modelTraining = st.container()
 
+def get_table_download_link_csv(df):
+    #csv = df.to_csv(index=False)
+    csv = df.to_csv().encode()
+    #b64 = base64.b64encode(csv.encode()).decode() 
+    b64 = base64.b64encode(csv).decode()
+    href = f'<a href="data:file/csv;base64,{b64}" download="captura.csv" target="_blank">Download csv file</a>'
+    return href
+
 def plot_propeller(Data,PD,AEAO,z):
   import matplotlib.pyplot as plt
   head=list(Data.columns)
@@ -109,10 +117,8 @@ with dataExploration:
   #st.write(villamarin)
     fig=plot_propeller(villamarin,PD,AEAO,z)
     st.pyplot(fig)
-    results=villamarin.to_csv().encode()
-    b64 = base64.b64encode(results).decode()
-    href = f'Download CSV File'
-    st.markdown(href, unsafe_allow_html=True)
+    st.markdown(get_table_download_link_csv(villamarin), unsafe_allow_html=True)
+    
 #with newFeatures:
  # st.header('Kaplan Propellers')
   
