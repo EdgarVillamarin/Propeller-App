@@ -93,7 +93,7 @@ with siteHeader:
   link = '[Contact Info](https://grupo-villamarin.com/)'
   st.markdown(link, unsafe_allow_html=True)
   #st.subheader('**mail:** <e_villamarin@grupo-villamarin.com>')
-  st.text('''Dear network, the aim of this project is make available
+  st.markdown('''Dear network, the aim of this project is make available
   open-water characteristics for ship propeller design and selection,
   for a wide range of propllers series in this web app
   At the moment, the classic B-series are available here.
