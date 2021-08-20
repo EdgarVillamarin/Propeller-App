@@ -20,7 +20,7 @@ def plot_propeller(Data,PD,AEAO,z):
   plt.xlabel('Advanced Coefficient   J')
   plt.ylabel('Kt,10*Kq,no')
   plt.title('B-serie'+'  '+'z:'+' '+str(z)+'  '+'AEAO:'+' '+str(AE/AO)+'  '+'PD:'+' '+str(P/D))
-  plt.grid()
+  #plt.grid()
   #ax.set_xlabel('Advanced Coefficient   J')
   #ax.set_ylabel('Kt,10*Kq,no')
   #ax.set_title('B-serie'+'  '+'z:'+' '+str(z)+'  '+'AEAO:'+' '+str(AE/AO)+'  '+'PD:'+' '+str(P/D))
