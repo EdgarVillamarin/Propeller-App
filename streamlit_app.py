@@ -111,12 +111,10 @@ with dataExploration:
   #st.write(villamarin)
     fig=plot_propeller(villamarin,PD,AEAO,z)
     st.pyplot(fig)
-    results=villamarin.to_csv('Propeller Results,'+str(PD)+str(AEAO)+str(z)+'.csv')
-    b64 = base64.b64encode(results.encode()).decode()
-	  new_filename = "new_text_file_{}_.csv".format(timestr)
-	  st.markdown("#### Download File ###")
-	  href = f'<a href="data:file/csv;base64,{b64}" download="{new_filename}">Click Here!!</a>'
-	  st.markdown(href,unsafe_allow_html=True)
+    results=villamarin.to_csv('Propeller Results,'+str(PD)+str(AEAO)+str(z)+'.csv').encode()
+    b64 = base64.b64encode(results).decode()
+    href = f'Download CSV File'
+    st.markdown(href, unsafe_allow_html=True)
 #with newFeatures:
  # st.header('Kaplan Propellers')
   
