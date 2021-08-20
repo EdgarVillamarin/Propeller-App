@@ -97,7 +97,7 @@ with dataExploration:
   AEAO=0.7
   z=3
   villamarin=curve_kt_kq(PD,AEAO,z)
-  st.write(villamarin)
+  #st.write(villamarin)
   fig=plot_propeller(villamarin,PD,AEAO,z)
   st.pyplot(fig)
 #with newFeatures:
