@@ -101,13 +101,13 @@ with dataExploration:
   #AEAO=0.7
   #z=3
   ready=st.checkbox('READY')
+  st.write('For other combination of parameters, mark uncheck ')
   if ready==True:
-    st.write('**Wait...**')
+    st.write('**Calculating...**')
     villamarin=curve_kt_kq(PD,AEAO,z)
   #st.write(villamarin)
     fig=plot_propeller(villamarin,PD,AEAO,z)
     st.pyplot(fig)
-  ready==False
 #with newFeatures:
  # st.header('Kaplan Propellers')
   
