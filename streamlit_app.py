@@ -77,6 +77,8 @@ with dataExploration:
   z=3
   villamarin=curve_kt_kq(PD,AEAO,z)
   st.write(villamarin)
+  fig=plot_propeller(villamarin)
+  st.pyplot(fig)
 #with newFeatures:
  # st.header('Kaplan Propellers')
   
