@@ -87,6 +87,11 @@ with siteHeader:
   st.text('The aim of this project is present a data base for a propeller')
 with dataExploration:
   st.header('Wagenningen Propellers')
+  st.latex(r'''
+...     a + ar + a r^2 + a r^3 + \cdots + a r^{n-1} =
+...     \sum_{k=0}^{n-1} ar^k =
+...     a \left(\frac{1-r^{n}}{1-r}\right)
+...     ''')
   PD=1.2
   AEAO=0.7
   z=3
