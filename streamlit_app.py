@@ -17,7 +17,7 @@ def plot_propeller(Data,PD,AEAO,z):
   ax.set_xlabel('Advanced Coefficient   J')
   ax.set_ylabel('Kt,10*Kq,no')
   ax.set_title('B-serie'+'  '+'z:'+' '+str(z)+'  '+'AEAO:'+' '+str(AE/AO)+'  '+'PD:'+' '+str(P/D))
-  ax.grid()
+  ax.set_grid()
   return fig
   
 def wage(ja,PD,AEAO,z):
