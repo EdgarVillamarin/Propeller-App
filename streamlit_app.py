@@ -76,7 +76,7 @@ with dataExploration:
   AEAO=0.7
   z=3
   villamarin=curve_kt_kq(PD,AEAO,z)
-  st.table(villamarin)
+  st.write(villamarin)
 #with newFeatures:
  # st.header('Kaplan Propellers')
   
