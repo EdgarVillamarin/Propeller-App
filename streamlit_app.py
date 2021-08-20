@@ -90,7 +90,7 @@ def curve_kt_kq(PD,AEAO,z):
 with siteHeader:
   st.title('Welcome to Ship Propeller Project')
   st.header('by Nav.Eng. Edgar Villamarin')
-  link = '[Contact Info](https://grupo-villamarin.com/)'
+  link = '[Personal Website](https://grupo-villamarin.com/)'
   st.markdown(link, unsafe_allow_html=True)
   #st.subheader('**mail:** <e_villamarin@grupo-villamarin.com>')
   st.markdown('''Dear network, the aim of this project is make available
