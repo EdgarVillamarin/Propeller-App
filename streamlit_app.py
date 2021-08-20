@@ -88,11 +88,11 @@ with siteHeader:
 with dataExploration:
   st.header('Wagenningen Propellers')
   st.text('The polynomials for thrust:')
-  st.text('')
   st.latex(r''' K_{T}= \sum_{s,t,u,v}^{} C^TJ^s(P/D)^t(A_{E}/A_{O})^uZ^v ''')
-  
+  st.text('The polynomials for torque:')
   st.latex(r''' K_{Q}= \sum_{s,t,u,v}^{} C^QJ^s(P/D)^t(A_{E}/A_{O})^uZ^v ''')
-  
+  st.text('The open-water efficiency of the propeller is:')
+  st.latex(r''' n_{O}= \[\frac{JK_{T}}{2\pi \varpi}\]''')
   PD=1.2
   AEAO=0.7
   z=3
