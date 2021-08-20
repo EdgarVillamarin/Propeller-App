@@ -94,7 +94,7 @@ with dataExploration:
   st.text('The open-water efficiency of the propeller is:')
   st.latex(r''' n_{O}= \frac{JK_{T}}{2\pi K_{Q}}''')
   
-  PD=st.number_input('Select the Pitch/Diameter',min_value=0.5)#,min_value=0.5,max_value=1.4,value=1,step=0.1)
+  PD=st.number_input('Select the Pitch/Diameter',min_value=0.5,max_value=1.4,value=1,step=0.1)#,min_value=0.5,max_value=1.4,value=1,step=0.1)
   #AEAO=st.number_input('Select the Expanded area coefficient',min_value=0.35,max_value=1.4,value=0.5,step=0.15)
   #z=st.number_input('Select the number of propellers',min_value=2,max_value=7,value=4,step=1)
   #PD=1.2
