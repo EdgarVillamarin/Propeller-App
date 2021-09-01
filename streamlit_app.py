@@ -187,7 +187,7 @@ with dataExploration:
   
   PD=st.number_input('Select the Pitch/Diameter',min_value=0.6,max_value=1.4,step=0.1)#,min_value=0.5,max_value=1.4,value=1,step=0.1)
   AEAO=st.number_input('Select the Expanded area coefficient',min_value=0.35,max_value=1.05,step=0.05)
-  z=st.number_input('Select the number of propellers',min_value=3,max_value=7,step=1)
+  z=st.number_input('Select the number of blades',min_value=3,max_value=7,step=1)
   #PD=1.2
   #AEAO=0.7
   #z=3
@@ -218,7 +218,7 @@ with newFeatures:
     st.write('**Calculating...**')
     st.write('For other combination of parameters, first mark uncheck ')
     villamarin1=curve_kt_kq_kaplan(SelectPropeller,PD1)
-    fig=plot_propeller_kaplan(villamarin1,PD1,SelectPropeller)
+    fig=plot_propeller_kaplan(villamarin1,float(PD1,2),SelectPropeller)
     st.pyplot(fig)
     st.markdown(get_table_download_link_csv(villamarin1,PD,'',''), unsafe_allow_html=True)
     
