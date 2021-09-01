@@ -198,7 +198,7 @@ with newFeatures:
   st.latex(r''' K_{Q}= \sum_{i=0}^{i=n} \sum_{j=0}^{j=n} C_{i,j}(P/D)^iJ^j''')
   st.text('The Kaplan propeller characteristics are specfic for 19A Nozzle')
   SelectPropeller=st.selectbox('Select the Kaplan propeller type',('ka365','ka455','ka470','ka575'))
-  #PD1=st.number_input('Select the Pitch/Diameter h',min_value=0.6,max_value=1.4,step=0.1)
+  AEAO1=st.number_input('Select the Expanded area coefficient',min_value=0.35,max_value=1.05,step=0.05)
   #SelectPropeller=str(SelectPropeller)
   #ready1=st.checkbox('READY')
   #if ready1==True:
