@@ -135,9 +135,9 @@ with newFeatures:
   st.text('The polynomials equation for thrust:')
   st.latex(r''' K_{T}= \sum_{i=0}^{i=n} \sum_{j=0}^{j=n} A_{i,j}(P/D)^iJ^j''')
   st.text('The polynomials equation for thrust with nozzle:')
-  st.latex(r''' K_{T}= \sum_{s,t,u,v}^{} C^TJ^s(P/D)^t(A_{E}/A_{O})^uZ^v ''')
+  st.latex(r''' K_{TN}= \sum_{i=0}^{i=n} \sum_{j=0}^{j=n} B_{i,j}(P/D)^iJ^j''')
   st.text('The polynomials equation for torque:')
-  st.latex(r''' K_{Q}= \sum_{s,t,u,v}^{} C^QJ^s(P/D)^t(A_{E}/A_{O})^uZ^v ''')
+  st.latex(r''' K_{Q}= \sum_{i=0}^{i=n} \sum_{j=0}^{j=n} C_{i,j}(P/D)^iJ^j''')
 #with modelTraining:
   #st.header('Wave Piercing Propeller')
   #ha=pd.read_csv('Coefficients/ka365.csv')
