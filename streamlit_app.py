@@ -139,7 +139,7 @@ with newFeatures:
   st.text('The polynomials equation for torque:')
   st.latex(r''' K_{Q}= \sum_{i=0}^{i=n} \sum_{j=0}^{j=n} C_{i,j}(P/D)^iJ^j''')
   st.text('The Kaplan propeller characteristics are specfic for 19A Nozzle')
-  SelectPropeller=st.selectbox('Select the Pitch/Diameter',('ote','asd','asdas'))
+  SelectPropeller=st.selectbox('Select the Kaplan propeller type',('ka365','ka455','ka470','ka575'))
 #with modelTraining:
   #st.header('Wave Piercing Propeller')
   #ha=pd.read_csv('Coefficients/ka365.csv')
