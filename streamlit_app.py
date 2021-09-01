@@ -197,7 +197,7 @@ with newFeatures:
   st.text('The polynomials equation for torque:')
   st.latex(r''' K_{Q}= \sum_{i=0}^{i=n} \sum_{j=0}^{j=n} C_{i,j}(P/D)^iJ^j''')
   st.text('The Kaplan propeller characteristics are specfic for 19A Nozzle')
-  AEAO1=st.number_input('Select the Expanded area coefficient',min_value=0.35,max_value=1.05,step=0.05)  
+  AEAO1=st.number_input('kj',min_value=0.35,max_value=1.05,step=0.05)  
   SelectPropeller=st.selectbox('Select the Kaplan propeller type',('ka365','ka455','ka470','ka575'))
   
   #SelectPropeller=str(SelectPropeller)
