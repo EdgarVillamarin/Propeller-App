@@ -201,7 +201,7 @@ with newFeatures:
   PD1=st.number_input('Select the Pitch/Diameter',min_value=0.6,max_value=1.4,step=0.1)
   SelectPropeller=str(SelectPropeller)
   ready1=st.checkbox('READY')
-  if ready==True:
+  if ready1==True:
     st.write('**Calculating...**')
     st.write('For other combination of parameters, first mark uncheck ')
     villamarin1=curve_kt_kq_kaplan(SelectPropeller,PD1)
