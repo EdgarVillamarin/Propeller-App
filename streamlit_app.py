@@ -197,7 +197,7 @@ with dataExploration:
     st.write('For other combination of parameters, first mark uncheck ')
     villamarin=curve_kt_kq(PD,AEAO,z)
   #st.write(villamarin)
-    fig=plot_propeller(villamarin,float(PD,2),AEAO,z)
+    fig=plot_propeller(villamarin,float(PD),AEAO,z)
     st.pyplot(fig)
     st.markdown(get_table_download_link_csv(villamarin,PD,AEAO,z), unsafe_allow_html=True)
     
@@ -218,7 +218,7 @@ with newFeatures:
     st.write('**Calculating...**')
     st.write('For other combination of parameters, first mark uncheck ')
     villamarin1=curve_kt_kq_kaplan(SelectPropeller,PD1)
-    fig=plot_propeller_kaplan(villamarin1,float(PD1,2),SelectPropeller)
+    fig=plot_propeller_kaplan(villamarin1,float(PD1),SelectPropeller)
     st.pyplot(fig)
     st.markdown(get_table_download_link_csv(villamarin1,PD,'',''), unsafe_allow_html=True)
     
