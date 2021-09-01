@@ -205,10 +205,8 @@ with newFeatures:
   if ready1==True:
     st.write('**Calculating...**')
     st.write('For other combination of parameters, first mark uncheck ')
-    M=kaplan(SelectPropeller,PD1,0.5)
-    st.write(M)
-    #villamarin1=curve_kt_kq_kaplan(SelectPropeller,PD1)
-    #st.write(villamarin1)
+    villamarin1=curve_kt_kq_kaplan(SelectPropeller,PD1)
+    st.write(villamarin1)
     #fig=plot_propeller(villamarin,PD,AEAO,z)
     #st.pyplot(fig)
     #st.markdown(get_table_download_link_csv(villamarin,PD,AEAO,z), unsafe_allow_html=True)
