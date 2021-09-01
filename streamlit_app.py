@@ -133,7 +133,7 @@ with dataExploration:
 with newFeatures:
   st.header('Kaplan Propellers')
   st.text('The polynomials equation for thrust:')
-  st.latex(r''' K_{T}= \sum_{i=0}^{i=n} \sum_{j=0}^{j=n} C^TJ^s(P/D)^t(A_{E}/A_{O})^uZ^v ''')
+  st.latex(r''' K_{T}= \sum_{i=0}^{i=n} \sum_{j=0}^{j=n} A_{i,j}(P/D)^iJ^j''')
   st.text('The polynomials equation for thrust with nozzle:')
   st.latex(r''' K_{T}= \sum_{s,t,u,v}^{} C^TJ^s(P/D)^t(A_{E}/A_{O})^uZ^v ''')
   st.text('The polynomials equation for torque:')
