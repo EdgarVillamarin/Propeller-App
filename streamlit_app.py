@@ -127,8 +127,8 @@ with dataExploration:
     st.pyplot(fig)
     st.markdown(get_table_download_link_csv(villamarin,PD,AEAO,z), unsafe_allow_html=True)
     
-#with newFeatures:
- # st.header('Kaplan Propellers')
+with newFeatures:
+  st.header('Kaplan Propellers')
   
 #with modelTraining:
   #st.header('Wave Piercing Propeller')
