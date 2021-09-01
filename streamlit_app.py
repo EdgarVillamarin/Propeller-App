@@ -200,12 +200,12 @@ with newFeatures:
   SelectPropeller=st.selectbox('Select the Kaplan propeller type',('ka365','ka455','ka470','ka575'))
   PD1=st.number_input('Select Pitch and Diameter Ratio',min_value=0.35,max_value=1.05,step=0.05) 
   SelectPropeller=str(SelectPropeller)
-  ready1=st.checkbox('DO')
-  #if ready1==True:
-    #st.write('**Calculating...**')
-    #st.write('For other combination of parameters, first mark uncheck ')
-    #villamarin1=curve_kt_kq_kaplan(SelectPropeller,PD1)
-    #st.write(villamarin)
+  ready1=st.checkbox('START')
+  if ready1==True:
+    st.write('**Calculating...**')
+    st.write('For other combination of parameters, first mark uncheck ')
+    villamarin1=curve_kt_kq_kaplan(SelectPropeller,PD1)
+    st.write(villamarin)
     #fig=plot_propeller(villamarin,PD,AEAO,z)
     #st.pyplot(fig)
     #st.markdown(get_table_download_link_csv(villamarin,PD,AEAO,z), unsafe_allow_html=True)
