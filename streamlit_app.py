@@ -197,7 +197,7 @@ with dataExploration:
     st.write('For other combination of parameters, first mark uncheck ')
     villamarin=curve_kt_kq(PD,AEAO,z)
   #st.write(villamarin)
-    fig=plot_propeller(villamarin,float(PD),AEAO,z)
+    fig=plot_propeller(villamarin,float("{:.2f}".format(PD)),AEAO,z)
     st.pyplot(fig)
     st.markdown(get_table_download_link_csv(villamarin,PD,AEAO,z), unsafe_allow_html=True)
     
