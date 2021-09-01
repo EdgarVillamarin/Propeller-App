@@ -45,7 +45,19 @@ def plot_propeller(Data,PD,AEAO,z):
   #ax.set_title('B-serie'+'  '+'z:'+' '+str(z)+'  '+'AEAO:'+' '+str(AE/AO)+'  '+'PD:'+' '+str(P/D))
   #ax.plot.grid()
   return fig
-  
+
+def plot_propeller_kaplan(Data,PD,FileID):
+  import matplotlib.pyplot as plt
+  head=list(Data.columns)
+  fig=plt.figure(figsize=(7,3))
+  plt.plot(Data['J'],Data['KT'],'k',Data['J'],Data['KTn'],'g',Data['J'],10*Data['KQ'],'r',Data['J'],Data['no'])
+  plt.title('Kaplan 19A'+'  '+str(FileID)+'  '+'PD:'+' '+str(PD))
+  plt.legend(['Kt','Ktn','10*Kq','no'])
+  plt.grid()
+  plt.xlabel('Advanced Coefficient   J')
+  plt.ylabel('Kt,10*Kq,no')
+  return fig
+
 def wage(ja,PD,AEAO,z):
   """
   Reference: Barnitsas, M.M., Ray, D. and Kinley, P. (1981).
@@ -199,7 +211,7 @@ with newFeatures:
   st.latex(r''' K_{Q}= \sum_{i=0}^{i=n} \sum_{j=0}^{j=n} C_{i,j}(P/D)^iJ^j''')
   st.text('The Kaplan propeller characteristics are specfic for 19A Nozzle')
   SelectPropeller=st.selectbox('Select the Kaplan propeller type',('ka365','ka455','ka470','ka575'))
-  PD1=st.number_input('Select Pitch and Diameter Ratio',min_value=0.5,max_value=1.4,step=0.1) 
+  PD1=st.number_input('Select Pitch and Diameter Ratio',min_value=0.6,max_value=1.2,step=0.1) 
   SelectPropeller=str(SelectPropeller)
   ready1=st.checkbox('START')
   if ready1==True:
@@ -207,9 +219,9 @@ with newFeatures:
     st.write('For other combination of parameters, first mark uncheck ')
     villamarin1=curve_kt_kq_kaplan(SelectPropeller,PD1)
     st.write(villamarin1)
-    #fig=plot_propeller(villamarin,PD,AEAO,z)
-    #st.pyplot(fig)
-    #st.markdown(get_table_download_link_csv(villamarin,PD,AEAO,z), unsafe_allow_html=True)
+    fig=plot_propeller_kaplan(villamarin1,PD1,SelectPropeller)
+    st.pyplot(fig)
+    st.markdown(get_table_download_link_csv(villamarin,PD,'',''), unsafe_allow_html=True)
     
 #with modelTraining:
   #st.header('Wave Piercing Propeller')
