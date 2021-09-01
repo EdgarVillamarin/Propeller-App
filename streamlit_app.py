@@ -202,7 +202,7 @@ with newFeatures:
   SelectPropeller=str(SelectPropeller)
   ready1=st.checkbox('START')
   if ready1==True:
-    File='Coefficients/'+str(FileID)+'.csv'
+    File='Coefficients/'+str(SelectPropeller)+'.csv'
     ka=pd.read_csv(File)
     st.write(ka)
     #st.write('**Calculating...**')
