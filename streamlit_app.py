@@ -202,13 +202,10 @@ with newFeatures:
   SelectPropeller=str(SelectPropeller)
   ready1=st.checkbox('START')
   if ready1==True:
-    File='Coefficients/'+str(SelectPropeller)+'.csv'
-    ka=pd.read_csv(File)
-    st.write(ka)
-    #st.write('**Calculating...**')
-    #st.write('For other combination of parameters, first mark uncheck ')
-    #M=kaplan(SelectPropeller,PD1,0.5)
-    #ST.write(M)
+    st.write('**Calculating...**')
+    st.write('For other combination of parameters, first mark uncheck ')
+    M=kaplan(SelectPropeller,PD1,0.5)
+    st.write(M)
     #villamarin1=curve_kt_kq_kaplan(SelectPropeller,PD1)
     #st.write(villamarin1)
     #fig=plot_propeller(villamarin,PD,AEAO,z)
