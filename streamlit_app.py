@@ -6,6 +6,7 @@ import base64
 #import matplotlib.pyplot as plt
 import matplotlib.pyplot as plt
 import matplotlib
+import numpy.matlib
 siteHeader = st.container()
 dataExploration = st.container()
 newFeatures = st.container()
