@@ -199,7 +199,7 @@ with newFeatures:
   st.text('The Kaplan propeller characteristics are specfic for 19A Nozzle')
   SelectPropeller=st.selectbox('Select the Kaplan propeller type',('ka365','ka455','ka470','ka575'))
   PD1=st.number_input('Select the Pitch/Diameter',min_value=0.6,max_value=1.4,step=0.1)
-  SelectPropeller=str(SelectPropeller)
+  #SelectPropeller=str(SelectPropeller)
   #ready1=st.checkbox('READY')
   #if ready1==True:
     #st.write('**Calculating...**')
