@@ -200,7 +200,7 @@ with newFeatures:
   SelectPropeller=st.selectbox('Select the Kaplan propeller type',('ka365','ka455','ka470','ka575'))
   PD1=st.number_input('Select Pitch and Diameter Ratio',min_value=0.35,max_value=1.05,step=0.05) 
   SelectPropeller=str(SelectPropeller)
-  ready1=st.checkbox('READY1')
+  ready1=st.checkbox('DO')
   #if ready1==True:
     #st.write('**Calculating...**')
     #st.write('For other combination of parameters, first mark uncheck ')
