@@ -221,7 +221,7 @@ with newFeatures:
     st.write(villamarin1)
     fig=plot_propeller_kaplan(villamarin1,PD1,SelectPropeller)
     st.pyplot(fig)
-    st.markdown(get_table_download_link_csv(villamarin,PD,'',''), unsafe_allow_html=True)
+    st.markdown(get_table_download_link_csv(villamarin1,PD,'',''), unsafe_allow_html=True)
     
 #with modelTraining:
   #st.header('Wave Piercing Propeller')
