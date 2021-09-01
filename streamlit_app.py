@@ -90,6 +90,64 @@ def curve_kt_kq(PD,AEAO,z):
   return villamarin
 
 
+def kaplan(FileID,PD,J):
+  """
+  Determine the KT: Thrust coefficient, KQ: Torque coefficient, no= open water efficiency for a 
+  different values of advance coefficient J, for wagennigen propellers.
+  Reference Coefficient:
+  https://repository.tudelft.nl/islandora/object/uuid:b8cd2238-1cd7-4a64-a74e-73f4dcdf35d4/datastream/OBJ/download
+  FileID: Name of the data file coefficient, Ka375,Ka455,Ka470,Ka575
+  """
+  File='Coefficients/'+str(FileID)+'.csv'
+  ka=pd.read_csv(File)
+  heads=list(ka.columns)
+  #factor=np.ones((7,7))
+  R=np.ones((7,1))
+  Ja=np.ones((7,1))
+  for x in range(0,7,1):
+    R[x,0]=PD**x
+    Ja[x,0]=J**x
+  for x in range(0,len(heads),1):
+    globals()[f'A{x}']=np.array(ka[heads[x]])
+    globals()[f'A{x}']=np.matlib.reshape(globals()[f'A{x}'],(7,7))
+  KT=float(np.matmul(np.transpose(np.matmul(A0,Ja)),R))
+  KQ=float(np.matmul(np.transpose(np.matmul(A1,Ja)),R))
+  KTN=float(np.matmul(np.transpose(np.matmul(A2,Ja)),R))
+  return KT,KTN,KQ
+
+def curve_kt_kq_kaplan(FileID,PD):
+  """
+  Determine the KT: Thrust coefficient, KQ: Torque coefficient, no= open water efficiency for a 
+  different values of advance coefficient J, for kapla in a duct 19A propellers.
+  """
+  if  PD> 0.5 and PD<1.4:
+    j=np.arange(0,2,0.001)
+    kt=[]
+    ktn=[]
+    kq=[]
+    ne=[]
+    jn=0
+    for x in range(0,len(j),1):
+      kt1,ktn1,kq1=kaplan(FileID,PD,j[x])
+      if kt1>0 and kq1>0:
+        kt.append(kt1)
+        kq.append(kq1)
+        ktn.append(ktn1)
+        ne.append((j[x]/(2*3.1416))*(kt1/kq1))
+        jn=jn+1
+    j=j[0:jn]
+    villamarin=pd.DataFrame()
+    villamarin['J']=j
+    villamarin['KT']=kt
+    villamarin['KTn']=ktn
+    villamarin['KQ']=kq
+    villamarin['no']=ne
+  else:
+    return print('Check aplication limits')
+  return villamarin
+
+
+
 with siteHeader:
   st.title('Welcome to Ship Propeller Project')
   st.header('by Nav.Eng. Edgar Villamarin')
@@ -140,6 +198,18 @@ with newFeatures:
   st.latex(r''' K_{Q}= \sum_{i=0}^{i=n} \sum_{j=0}^{j=n} C_{i,j}(P/D)^iJ^j''')
   st.text('The Kaplan propeller characteristics are specfic for 19A Nozzle')
   SelectPropeller=st.selectbox('Select the Kaplan propeller type',('ka365','ka455','ka470','ka575'))
+  PD1=st.number_input('Select the Pitch/Diameter',min_value=0.6,max_value=1.4,step=0.1)
+  SelectPropeller=str(SelectPropeller)
+  ready1=st.checkbox('READY')
+  if ready==True:
+    st.write('**Calculating...**')
+    st.write('For other combination of parameters, first mark uncheck ')
+    villamarin1=curve_kt_kq_kaplan(SelectPropeller,PD1)
+    st.write(villamarin)
+    #fig=plot_propeller(villamarin,PD,AEAO,z)
+    #st.pyplot(fig)
+    #st.markdown(get_table_download_link_csv(villamarin,PD,AEAO,z), unsafe_allow_html=True)
+    
 #with modelTraining:
   #st.header('Wave Piercing Propeller')
   #ha=pd.read_csv('Coefficients/ka365.csv')
